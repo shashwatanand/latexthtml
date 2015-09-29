@@ -1,0 +1,31 @@
+grammar org.shashwat.xtext.latexQ.LatexQ with org.eclipse.xtext.common.Terminals
+
+generate latexQ "http://www.shashwat.org/xtext/latexQ/LatexQ"
+
+QuestionPaper:
+	'papername' papername=ID
+	(questions+=Question)*
+;
+	
+Question:
+	'Question' question=STRING
+	type=Type '{'
+		(answers+=Answer)+
+	'}'
+;
+	
+Answer:
+	'Answer' answer=STRING
+;
+
+Type:
+	CHECK|RADIO
+;
+
+CHECK:
+	check?='check'
+;
+
+RADIO:
+	radio?='radio'
+;
