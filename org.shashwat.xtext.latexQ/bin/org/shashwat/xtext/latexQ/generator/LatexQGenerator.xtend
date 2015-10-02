@@ -43,7 +43,7 @@ class LatexQGenerator implements IGenerator {
 				<ol>
 				«FOR q:qp.questions»
 					<li>
-					«q.compile»
+						«q.compile»
 					</li>
 				«ENDFOR»
 				</ol>
@@ -57,7 +57,7 @@ class LatexQGenerator implements IGenerator {
 			<ul>
 				«FOR a:q.answers»
 					<li>
-					«a.compile»
+						«a.compile»
 					</li>
 				«ENDFOR»
 			</ul>

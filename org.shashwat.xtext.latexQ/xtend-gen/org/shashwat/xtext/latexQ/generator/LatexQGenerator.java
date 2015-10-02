@@ -84,8 +84,9 @@ public class LatexQGenerator implements IGenerator {
         _builder.append("<li>");
         _builder.newLine();
         _builder.append("\t\t");
+        _builder.append("\t");
         CharSequence _compile = this.compile(q);
-        _builder.append(_compile, "\t\t");
+        _builder.append(_compile, "\t\t\t");
         _builder.newLineIfNotEmpty();
         _builder.append("\t\t");
         _builder.append("</li>");
@@ -123,8 +124,9 @@ public class LatexQGenerator implements IGenerator {
         _builder.append("<li>");
         _builder.newLine();
         _builder.append("\t\t");
+        _builder.append("\t");
         CharSequence _compile = this.compile(a);
-        _builder.append(_compile, "\t\t");
+        _builder.append(_compile, "\t\t\t");
         _builder.newLineIfNotEmpty();
         _builder.append("\t\t");
         _builder.append("</li>");
