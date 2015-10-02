@@ -9,6 +9,8 @@ import org.eclipse.xtext.generator.IGenerator
 import org.shashwat.xtext.latexQ.latexQ.QuestionPaper
 import org.shashwat.xtext.latexQ.latexQ.Question
 import org.shashwat.xtext.latexQ.latexQ.Answer
+import org.shashwat.xtext.latexQ.latexQ.CHECK
+import org.shashwat.xtext.latexQ.latexQ.RADIO
 
 /**
  * Generates code from your model files on save.
@@ -60,9 +62,7 @@ class LatexQGenerator implements IGenerator {
 					«a.compile»
 					</li>
 				«ENDFOR»
-				
 			</ul>
-			
 		</section>
 	'''
 	
@@ -70,9 +70,9 @@ class LatexQGenerator implements IGenerator {
 		«IF a.type == null»
 			<p>«a.answer»</p>
 		«ENDIF»
-		«IF a.type == "check"»
+		«IF a.type == CHECK.name»
 			<p><input type="CHECK">«a.answer»</input></p>
-		«ELSEIF a.type == "radio"»
+		«ELSEIF a.type == RADIO.name»
 			<p><input type="RADIO">«a.answer»</input></p>
 		«ELSE»
 			<p>«a.answer»</p>

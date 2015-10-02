@@ -14,8 +14,10 @@ import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.shashwat.xtext.latexQ.latexQ.Answer;
+import org.shashwat.xtext.latexQ.latexQ.CHECK;
 import org.shashwat.xtext.latexQ.latexQ.Question;
 import org.shashwat.xtext.latexQ.latexQ.QuestionPaper;
+import org.shashwat.xtext.latexQ.latexQ.RADIO;
 import org.shashwat.xtext.latexQ.latexQ.Type;
 
 /**
@@ -133,12 +135,8 @@ public class LatexQGenerator implements IGenerator {
         _builder.newLine();
       }
     }
-    _builder.append("\t\t");
-    _builder.newLine();
     _builder.append("\t");
     _builder.append("</ul>");
-    _builder.newLine();
-    _builder.append("\t");
     _builder.newLine();
     _builder.append("</section>");
     _builder.newLine();
@@ -160,7 +158,8 @@ public class LatexQGenerator implements IGenerator {
     }
     {
       Type _type_1 = a.getType();
-      boolean _equals_1 = Objects.equal(_type_1, "check");
+      String _name = CHECK.class.getName();
+      boolean _equals_1 = Objects.equal(_type_1, _name);
       if (_equals_1) {
         _builder.append("<p><input type=\"CHECK\">");
         String _answer_1 = a.getAnswer();
@@ -169,7 +168,8 @@ public class LatexQGenerator implements IGenerator {
         _builder.newLineIfNotEmpty();
       } else {
         Type _type_2 = a.getType();
-        boolean _equals_2 = Objects.equal(_type_2, "radio");
+        String _name_1 = RADIO.class.getName();
+        boolean _equals_2 = Objects.equal(_type_2, _name_1);
         if (_equals_2) {
           _builder.append("<p><input type=\"RADIO\">");
           String _answer_2 = a.getAnswer();
