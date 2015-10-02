@@ -160,49 +160,31 @@ ruleQuestion returns [EObject current=null]
 	    }
 
 )
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getQuestionAccess().getTypeTypeParserRuleCall_2_0()); 
-	    }
-		lv_type_2_0=ruleType		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getQuestionRule());
-	        }
-       		set(
-       			$current, 
-       			"type",
-        		lv_type_2_0, 
-        		"Type");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)	otherlv_3='{' 
+)	otherlv_2='{' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getQuestionAccess().getLeftCurlyBracketKeyword_3());
+    	newLeafNode(otherlv_2, grammarAccess.getQuestionAccess().getLeftCurlyBracketKeyword_2());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQuestionAccess().getAnswersAnswerParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getQuestionAccess().getAnswersAnswerParserRuleCall_3_0()); 
 	    }
-		lv_answers_4_0=ruleAnswer		{
+		lv_answers_3_0=ruleAnswer		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getQuestionRule());
 	        }
        		add(
        			$current, 
        			"answers",
-        		lv_answers_4_0, 
+        		lv_answers_3_0, 
         		"Answer");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)+	otherlv_5='}' 
+)+	otherlv_4='}' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getQuestionAccess().getRightCurlyBracketKeyword_5());
+    	newLeafNode(otherlv_4, grammarAccess.getQuestionAccess().getRightCurlyBracketKeyword_4());
     }
 )
 ;
@@ -244,6 +226,24 @@ ruleAnswer returns [EObject current=null]
        			"answer",
         		lv_answer_1_0, 
         		"STRING");
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getAnswerAccess().getTypeTypeParserRuleCall_2_0()); 
+	    }
+		lv_type_2_0=ruleType		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getAnswerRule());
+	        }
+       		set(
+       			$current, 
+       			"type",
+        		lv_type_2_0, 
+        		"Type");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )

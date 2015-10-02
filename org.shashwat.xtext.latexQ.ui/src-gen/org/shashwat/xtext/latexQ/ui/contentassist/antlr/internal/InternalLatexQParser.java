@@ -1075,31 +1075,21 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Question__Group__2__Impl"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:418:1: rule__Question__Group__2__Impl : ( ( rule__Question__TypeAssignment_2 ) ) ;
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:418:1: rule__Question__Group__2__Impl : ( '{' ) ;
     public final void rule__Question__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:422:1: ( ( ( rule__Question__TypeAssignment_2 ) ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:423:1: ( ( rule__Question__TypeAssignment_2 ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:422:1: ( ( '{' ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:423:1: ( '{' )
             {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:423:1: ( ( rule__Question__TypeAssignment_2 ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:424:1: ( rule__Question__TypeAssignment_2 )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:423:1: ( '{' )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:424:1: '{'
             {
-             before(grammarAccess.getQuestionAccess().getTypeAssignment_2()); 
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:425:1: ( rule__Question__TypeAssignment_2 )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:425:2: rule__Question__TypeAssignment_2
-            {
-            pushFollow(FOLLOW_rule__Question__TypeAssignment_2_in_rule__Question__Group__2__Impl815);
-            rule__Question__TypeAssignment_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getQuestionAccess().getTypeAssignment_2()); 
+             before(grammarAccess.getQuestionAccess().getLeftCurlyBracketKeyword_2()); 
+            match(input,13,FOLLOW_13_in_rule__Question__Group__2__Impl816); 
+             after(grammarAccess.getQuestionAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
 
@@ -1122,21 +1112,21 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Question__Group__3"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:435:1: rule__Question__Group__3 : rule__Question__Group__3__Impl rule__Question__Group__4 ;
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:437:1: rule__Question__Group__3 : rule__Question__Group__3__Impl rule__Question__Group__4 ;
     public final void rule__Question__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:439:1: ( rule__Question__Group__3__Impl rule__Question__Group__4 )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:440:2: rule__Question__Group__3__Impl rule__Question__Group__4
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:441:1: ( rule__Question__Group__3__Impl rule__Question__Group__4 )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:442:2: rule__Question__Group__3__Impl rule__Question__Group__4
             {
-            pushFollow(FOLLOW_rule__Question__Group__3__Impl_in_rule__Question__Group__3845);
+            pushFollow(FOLLOW_rule__Question__Group__3__Impl_in_rule__Question__Group__3847);
             rule__Question__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Question__Group__4_in_rule__Question__Group__3848);
+            pushFollow(FOLLOW_rule__Question__Group__4_in_rule__Question__Group__3850);
             rule__Question__Group__4();
 
             state._fsp--;
@@ -1160,21 +1150,74 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Question__Group__3__Impl"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:447:1: rule__Question__Group__3__Impl : ( '{' ) ;
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:449:1: rule__Question__Group__3__Impl : ( ( ( rule__Question__AnswersAssignment_3 ) ) ( ( rule__Question__AnswersAssignment_3 )* ) ) ;
     public final void rule__Question__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:451:1: ( ( '{' ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:452:1: ( '{' )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:453:1: ( ( ( ( rule__Question__AnswersAssignment_3 ) ) ( ( rule__Question__AnswersAssignment_3 )* ) ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:454:1: ( ( ( rule__Question__AnswersAssignment_3 ) ) ( ( rule__Question__AnswersAssignment_3 )* ) )
             {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:452:1: ( '{' )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:453:1: '{'
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:454:1: ( ( ( rule__Question__AnswersAssignment_3 ) ) ( ( rule__Question__AnswersAssignment_3 )* ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:455:1: ( ( rule__Question__AnswersAssignment_3 ) ) ( ( rule__Question__AnswersAssignment_3 )* )
             {
-             before(grammarAccess.getQuestionAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,13,FOLLOW_13_in_rule__Question__Group__3__Impl876); 
-             after(grammarAccess.getQuestionAccess().getLeftCurlyBracketKeyword_3()); 
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:455:1: ( ( rule__Question__AnswersAssignment_3 ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:456:1: ( rule__Question__AnswersAssignment_3 )
+            {
+             before(grammarAccess.getQuestionAccess().getAnswersAssignment_3()); 
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:457:1: ( rule__Question__AnswersAssignment_3 )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:457:2: rule__Question__AnswersAssignment_3
+            {
+            pushFollow(FOLLOW_rule__Question__AnswersAssignment_3_in_rule__Question__Group__3__Impl879);
+            rule__Question__AnswersAssignment_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getQuestionAccess().getAnswersAssignment_3()); 
+
+            }
+
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:460:1: ( ( rule__Question__AnswersAssignment_3 )* )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:461:1: ( rule__Question__AnswersAssignment_3 )*
+            {
+             before(grammarAccess.getQuestionAccess().getAnswersAssignment_3()); 
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:462:1: ( rule__Question__AnswersAssignment_3 )*
+            loop3:
+            do {
+                int alt3=2;
+                int LA3_0 = input.LA(1);
+
+                if ( (LA3_0==15) ) {
+                    alt3=1;
+                }
+
+
+                switch (alt3) {
+            	case 1 :
+            	    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:462:2: rule__Question__AnswersAssignment_3
+            	    {
+            	    pushFollow(FOLLOW_rule__Question__AnswersAssignment_3_in_rule__Question__Group__3__Impl891);
+            	    rule__Question__AnswersAssignment_3();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop3;
+                }
+            } while (true);
+
+             after(grammarAccess.getQuestionAccess().getAnswersAssignment_3()); 
+
+            }
+
 
             }
 
@@ -1197,22 +1240,17 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Question__Group__4"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:466:1: rule__Question__Group__4 : rule__Question__Group__4__Impl rule__Question__Group__5 ;
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:473:1: rule__Question__Group__4 : rule__Question__Group__4__Impl ;
     public final void rule__Question__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:470:1: ( rule__Question__Group__4__Impl rule__Question__Group__5 )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:471:2: rule__Question__Group__4__Impl rule__Question__Group__5
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:477:1: ( rule__Question__Group__4__Impl )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:478:2: rule__Question__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Question__Group__4__Impl_in_rule__Question__Group__4907);
+            pushFollow(FOLLOW_rule__Question__Group__4__Impl_in_rule__Question__Group__4924);
             rule__Question__Group__4__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Question__Group__5_in_rule__Question__Group__4910);
-            rule__Question__Group__5();
 
             state._fsp--;
 
@@ -1235,74 +1273,21 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Question__Group__4__Impl"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:478:1: rule__Question__Group__4__Impl : ( ( ( rule__Question__AnswersAssignment_4 ) ) ( ( rule__Question__AnswersAssignment_4 )* ) ) ;
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:484:1: rule__Question__Group__4__Impl : ( '}' ) ;
     public final void rule__Question__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:482:1: ( ( ( ( rule__Question__AnswersAssignment_4 ) ) ( ( rule__Question__AnswersAssignment_4 )* ) ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:483:1: ( ( ( rule__Question__AnswersAssignment_4 ) ) ( ( rule__Question__AnswersAssignment_4 )* ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:488:1: ( ( '}' ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:489:1: ( '}' )
             {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:483:1: ( ( ( rule__Question__AnswersAssignment_4 ) ) ( ( rule__Question__AnswersAssignment_4 )* ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:484:1: ( ( rule__Question__AnswersAssignment_4 ) ) ( ( rule__Question__AnswersAssignment_4 )* )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:489:1: ( '}' )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:490:1: '}'
             {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:484:1: ( ( rule__Question__AnswersAssignment_4 ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:485:1: ( rule__Question__AnswersAssignment_4 )
-            {
-             before(grammarAccess.getQuestionAccess().getAnswersAssignment_4()); 
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:486:1: ( rule__Question__AnswersAssignment_4 )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:486:2: rule__Question__AnswersAssignment_4
-            {
-            pushFollow(FOLLOW_rule__Question__AnswersAssignment_4_in_rule__Question__Group__4__Impl939);
-            rule__Question__AnswersAssignment_4();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getQuestionAccess().getAnswersAssignment_4()); 
-
-            }
-
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:489:1: ( ( rule__Question__AnswersAssignment_4 )* )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:490:1: ( rule__Question__AnswersAssignment_4 )*
-            {
-             before(grammarAccess.getQuestionAccess().getAnswersAssignment_4()); 
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:491:1: ( rule__Question__AnswersAssignment_4 )*
-            loop3:
-            do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
-
-                if ( (LA3_0==15) ) {
-                    alt3=1;
-                }
-
-
-                switch (alt3) {
-            	case 1 :
-            	    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:491:2: rule__Question__AnswersAssignment_4
-            	    {
-            	    pushFollow(FOLLOW_rule__Question__AnswersAssignment_4_in_rule__Question__Group__4__Impl951);
-            	    rule__Question__AnswersAssignment_4();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop3;
-                }
-            } while (true);
-
-             after(grammarAccess.getQuestionAccess().getAnswersAssignment_4()); 
-
-            }
-
+             before(grammarAccess.getQuestionAccess().getRightCurlyBracketKeyword_4()); 
+            match(input,14,FOLLOW_14_in_rule__Question__Group__4__Impl952); 
+             after(grammarAccess.getQuestionAccess().getRightCurlyBracketKeyword_4()); 
 
             }
 
@@ -1324,92 +1309,22 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Question__Group__4__Impl"
 
 
-    // $ANTLR start "rule__Question__Group__5"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:502:1: rule__Question__Group__5 : rule__Question__Group__5__Impl ;
-    public final void rule__Question__Group__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:506:1: ( rule__Question__Group__5__Impl )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:507:2: rule__Question__Group__5__Impl
-            {
-            pushFollow(FOLLOW_rule__Question__Group__5__Impl_in_rule__Question__Group__5984);
-            rule__Question__Group__5__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Question__Group__5"
-
-
-    // $ANTLR start "rule__Question__Group__5__Impl"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:513:1: rule__Question__Group__5__Impl : ( '}' ) ;
-    public final void rule__Question__Group__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:517:1: ( ( '}' ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:518:1: ( '}' )
-            {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:518:1: ( '}' )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:519:1: '}'
-            {
-             before(grammarAccess.getQuestionAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,14,FOLLOW_14_in_rule__Question__Group__5__Impl1012); 
-             after(grammarAccess.getQuestionAccess().getRightCurlyBracketKeyword_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Question__Group__5__Impl"
-
-
     // $ANTLR start "rule__Answer__Group__0"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:544:1: rule__Answer__Group__0 : rule__Answer__Group__0__Impl rule__Answer__Group__1 ;
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:513:1: rule__Answer__Group__0 : rule__Answer__Group__0__Impl rule__Answer__Group__1 ;
     public final void rule__Answer__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:548:1: ( rule__Answer__Group__0__Impl rule__Answer__Group__1 )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:549:2: rule__Answer__Group__0__Impl rule__Answer__Group__1
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:517:1: ( rule__Answer__Group__0__Impl rule__Answer__Group__1 )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:518:2: rule__Answer__Group__0__Impl rule__Answer__Group__1
             {
-            pushFollow(FOLLOW_rule__Answer__Group__0__Impl_in_rule__Answer__Group__01055);
+            pushFollow(FOLLOW_rule__Answer__Group__0__Impl_in_rule__Answer__Group__0993);
             rule__Answer__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Answer__Group__1_in_rule__Answer__Group__01058);
+            pushFollow(FOLLOW_rule__Answer__Group__1_in_rule__Answer__Group__0996);
             rule__Answer__Group__1();
 
             state._fsp--;
@@ -1433,20 +1348,20 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Answer__Group__0__Impl"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:556:1: rule__Answer__Group__0__Impl : ( 'Answer' ) ;
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:525:1: rule__Answer__Group__0__Impl : ( 'Answer' ) ;
     public final void rule__Answer__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:560:1: ( ( 'Answer' ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:561:1: ( 'Answer' )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:529:1: ( ( 'Answer' ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:530:1: ( 'Answer' )
             {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:561:1: ( 'Answer' )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:562:1: 'Answer'
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:530:1: ( 'Answer' )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:531:1: 'Answer'
             {
              before(grammarAccess.getAnswerAccess().getAnswerKeyword_0()); 
-            match(input,15,FOLLOW_15_in_rule__Answer__Group__0__Impl1086); 
+            match(input,15,FOLLOW_15_in_rule__Answer__Group__0__Impl1024); 
              after(grammarAccess.getAnswerAccess().getAnswerKeyword_0()); 
 
             }
@@ -1470,17 +1385,22 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Answer__Group__1"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:575:1: rule__Answer__Group__1 : rule__Answer__Group__1__Impl ;
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:544:1: rule__Answer__Group__1 : rule__Answer__Group__1__Impl rule__Answer__Group__2 ;
     public final void rule__Answer__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:579:1: ( rule__Answer__Group__1__Impl )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:580:2: rule__Answer__Group__1__Impl
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:548:1: ( rule__Answer__Group__1__Impl rule__Answer__Group__2 )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:549:2: rule__Answer__Group__1__Impl rule__Answer__Group__2
             {
-            pushFollow(FOLLOW_rule__Answer__Group__1__Impl_in_rule__Answer__Group__11117);
+            pushFollow(FOLLOW_rule__Answer__Group__1__Impl_in_rule__Answer__Group__11055);
             rule__Answer__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Answer__Group__2_in_rule__Answer__Group__11058);
+            rule__Answer__Group__2();
 
             state._fsp--;
 
@@ -1503,23 +1423,23 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Answer__Group__1__Impl"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:586:1: rule__Answer__Group__1__Impl : ( ( rule__Answer__AnswerAssignment_1 ) ) ;
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:556:1: rule__Answer__Group__1__Impl : ( ( rule__Answer__AnswerAssignment_1 ) ) ;
     public final void rule__Answer__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:590:1: ( ( ( rule__Answer__AnswerAssignment_1 ) ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:591:1: ( ( rule__Answer__AnswerAssignment_1 ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:560:1: ( ( ( rule__Answer__AnswerAssignment_1 ) ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:561:1: ( ( rule__Answer__AnswerAssignment_1 ) )
             {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:591:1: ( ( rule__Answer__AnswerAssignment_1 ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:592:1: ( rule__Answer__AnswerAssignment_1 )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:561:1: ( ( rule__Answer__AnswerAssignment_1 ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:562:1: ( rule__Answer__AnswerAssignment_1 )
             {
              before(grammarAccess.getAnswerAccess().getAnswerAssignment_1()); 
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:593:1: ( rule__Answer__AnswerAssignment_1 )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:593:2: rule__Answer__AnswerAssignment_1
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:563:1: ( rule__Answer__AnswerAssignment_1 )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:563:2: rule__Answer__AnswerAssignment_1
             {
-            pushFollow(FOLLOW_rule__Answer__AnswerAssignment_1_in_rule__Answer__Group__1__Impl1144);
+            pushFollow(FOLLOW_rule__Answer__AnswerAssignment_1_in_rule__Answer__Group__1__Impl1085);
             rule__Answer__AnswerAssignment_1();
 
             state._fsp--;
@@ -1547,6 +1467,86 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
         return ;
     }
     // $ANTLR end "rule__Answer__Group__1__Impl"
+
+
+    // $ANTLR start "rule__Answer__Group__2"
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:573:1: rule__Answer__Group__2 : rule__Answer__Group__2__Impl ;
+    public final void rule__Answer__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:577:1: ( rule__Answer__Group__2__Impl )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:578:2: rule__Answer__Group__2__Impl
+            {
+            pushFollow(FOLLOW_rule__Answer__Group__2__Impl_in_rule__Answer__Group__21115);
+            rule__Answer__Group__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Answer__Group__2"
+
+
+    // $ANTLR start "rule__Answer__Group__2__Impl"
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:584:1: rule__Answer__Group__2__Impl : ( ( rule__Answer__TypeAssignment_2 ) ) ;
+    public final void rule__Answer__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:588:1: ( ( ( rule__Answer__TypeAssignment_2 ) ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:589:1: ( ( rule__Answer__TypeAssignment_2 ) )
+            {
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:589:1: ( ( rule__Answer__TypeAssignment_2 ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:590:1: ( rule__Answer__TypeAssignment_2 )
+            {
+             before(grammarAccess.getAnswerAccess().getTypeAssignment_2()); 
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:591:1: ( rule__Answer__TypeAssignment_2 )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:591:2: rule__Answer__TypeAssignment_2
+            {
+            pushFollow(FOLLOW_rule__Answer__TypeAssignment_2_in_rule__Answer__Group__2__Impl1142);
+            rule__Answer__TypeAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getAnswerAccess().getTypeAssignment_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Answer__Group__2__Impl"
 
 
     // $ANTLR start "rule__QuestionPaper__PapernameAssignment_1"
@@ -1664,67 +1664,26 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Question__QuestionAssignment_1"
 
 
-    // $ANTLR start "rule__Question__TypeAssignment_2"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:653:1: rule__Question__TypeAssignment_2 : ( ruleType ) ;
-    public final void rule__Question__TypeAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Question__AnswersAssignment_3"
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:653:1: rule__Question__AnswersAssignment_3 : ( ruleAnswer ) ;
+    public final void rule__Question__AnswersAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:657:1: ( ( ruleType ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:658:1: ( ruleType )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:657:1: ( ( ruleAnswer ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:658:1: ( ruleAnswer )
             {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:658:1: ( ruleType )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:659:1: ruleType
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:658:1: ( ruleAnswer )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:659:1: ruleAnswer
             {
-             before(grammarAccess.getQuestionAccess().getTypeTypeParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleType_in_rule__Question__TypeAssignment_21276);
-            ruleType();
-
-            state._fsp--;
-
-             after(grammarAccess.getQuestionAccess().getTypeTypeParserRuleCall_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Question__TypeAssignment_2"
-
-
-    // $ANTLR start "rule__Question__AnswersAssignment_4"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:668:1: rule__Question__AnswersAssignment_4 : ( ruleAnswer ) ;
-    public final void rule__Question__AnswersAssignment_4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:672:1: ( ( ruleAnswer ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:673:1: ( ruleAnswer )
-            {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:673:1: ( ruleAnswer )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:674:1: ruleAnswer
-            {
-             before(grammarAccess.getQuestionAccess().getAnswersAnswerParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleAnswer_in_rule__Question__AnswersAssignment_41307);
+             before(grammarAccess.getQuestionAccess().getAnswersAnswerParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleAnswer_in_rule__Question__AnswersAssignment_31276);
             ruleAnswer();
 
             state._fsp--;
 
-             after(grammarAccess.getQuestionAccess().getAnswersAnswerParserRuleCall_4_0()); 
+             after(grammarAccess.getQuestionAccess().getAnswersAnswerParserRuleCall_3_0()); 
 
             }
 
@@ -1743,24 +1702,24 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Question__AnswersAssignment_4"
+    // $ANTLR end "rule__Question__AnswersAssignment_3"
 
 
     // $ANTLR start "rule__Answer__AnswerAssignment_1"
-    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:683:1: rule__Answer__AnswerAssignment_1 : ( RULE_STRING ) ;
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:668:1: rule__Answer__AnswerAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Answer__AnswerAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:687:1: ( ( RULE_STRING ) )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:688:1: ( RULE_STRING )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:672:1: ( ( RULE_STRING ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:673:1: ( RULE_STRING )
             {
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:688:1: ( RULE_STRING )
-            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:689:1: RULE_STRING
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:673:1: ( RULE_STRING )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:674:1: RULE_STRING
             {
              before(grammarAccess.getAnswerAccess().getAnswerSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Answer__AnswerAssignment_11338); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Answer__AnswerAssignment_11307); 
              after(grammarAccess.getAnswerAccess().getAnswerSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -1781,6 +1740,47 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
         return ;
     }
     // $ANTLR end "rule__Answer__AnswerAssignment_1"
+
+
+    // $ANTLR start "rule__Answer__TypeAssignment_2"
+    // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:683:1: rule__Answer__TypeAssignment_2 : ( ruleType ) ;
+    public final void rule__Answer__TypeAssignment_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:687:1: ( ( ruleType ) )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:688:1: ( ruleType )
+            {
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:688:1: ( ruleType )
+            // ../org.shashwat.xtext.latexQ.ui/src-gen/org/shashwat/xtext/latexQ/ui/contentassist/antlr/internal/InternalLatexQ.g:689:1: ruleType
+            {
+             before(grammarAccess.getAnswerAccess().getTypeTypeParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleType_in_rule__Answer__TypeAssignment_21338);
+            ruleType();
+
+            state._fsp--;
+
+             after(grammarAccess.getAnswerAccess().getTypeTypeParserRuleCall_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Answer__TypeAssignment_2"
 
 
     // $ANTLR start "rule__CHECK__CheckAssignment"
@@ -1908,32 +1908,32 @@ public class InternalLatexQParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Question__Group__0__Impl_in_rule__Question__Group__0663 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_rule__Question__Group__1_in_rule__Question__Group__0666 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_12_in_rule__Question__Group__0__Impl694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Question__Group__1__Impl_in_rule__Question__Group__1725 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_rule__Question__Group__1__Impl_in_rule__Question__Group__1725 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_rule__Question__Group__2_in_rule__Question__Group__1728 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Question__QuestionAssignment_1_in_rule__Question__Group__1__Impl755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Question__Group__2__Impl_in_rule__Question__Group__2785 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__Question__Group__2__Impl_in_rule__Question__Group__2785 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_rule__Question__Group__3_in_rule__Question__Group__2788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Question__TypeAssignment_2_in_rule__Question__Group__2__Impl815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Question__Group__3__Impl_in_rule__Question__Group__3845 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__Question__Group__4_in_rule__Question__Group__3848 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Question__Group__3__Impl876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Question__Group__4__Impl_in_rule__Question__Group__4907 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__Question__Group__5_in_rule__Question__Group__4910 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Question__AnswersAssignment_4_in_rule__Question__Group__4__Impl939 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_rule__Question__AnswersAssignment_4_in_rule__Question__Group__4__Impl951 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_rule__Question__Group__5__Impl_in_rule__Question__Group__5984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Question__Group__5__Impl1012 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Answer__Group__0__Impl_in_rule__Answer__Group__01055 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Answer__Group__1_in_rule__Answer__Group__01058 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Answer__Group__0__Impl1086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Answer__Group__1__Impl_in_rule__Answer__Group__11117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Answer__AnswerAssignment_1_in_rule__Answer__Group__1__Impl1144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Question__Group__2__Impl816 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Question__Group__3__Impl_in_rule__Question__Group__3847 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__Question__Group__4_in_rule__Question__Group__3850 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Question__AnswersAssignment_3_in_rule__Question__Group__3__Impl879 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_rule__Question__AnswersAssignment_3_in_rule__Question__Group__3__Impl891 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_rule__Question__Group__4__Impl_in_rule__Question__Group__4924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Question__Group__4__Impl952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group__0__Impl_in_rule__Answer__Group__0993 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Answer__Group__1_in_rule__Answer__Group__0996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Answer__Group__0__Impl1024 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group__1__Impl_in_rule__Answer__Group__11055 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_rule__Answer__Group__2_in_rule__Answer__Group__11058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__AnswerAssignment_1_in_rule__Answer__Group__1__Impl1085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group__2__Impl_in_rule__Answer__Group__21115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__TypeAssignment_2_in_rule__Answer__Group__2__Impl1142 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__QuestionPaper__PapernameAssignment_11183 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleQuestion_in_rule__QuestionPaper__QuestionsAssignment_21214 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__Question__QuestionAssignment_11245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_rule__Question__TypeAssignment_21276 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnswer_in_rule__Question__AnswersAssignment_41307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Answer__AnswerAssignment_11338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnswer_in_rule__Question__AnswersAssignment_31276 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Answer__AnswerAssignment_11307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_rule__Answer__TypeAssignment_21338 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_16_in_rule__CHECK__CheckAssignment1374 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_17_in_rule__RADIO__RadioAssignment1418 = new BitSet(new long[]{0x0000000000000002L});
 

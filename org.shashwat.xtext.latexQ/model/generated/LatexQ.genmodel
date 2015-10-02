@@ -13,11 +13,11 @@
     </genClasses>
     <genClasses ecoreClass="LatexQ.ecore#//Question">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LatexQ.ecore#//Question/question"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LatexQ.ecore#//Question/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LatexQ.ecore#//Question/answers"/>
     </genClasses>
     <genClasses ecoreClass="LatexQ.ecore#//Answer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LatexQ.ecore#//Answer/answer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LatexQ.ecore#//Answer/type"/>
     </genClasses>
     <genClasses ecoreClass="LatexQ.ecore#//Type"/>
     <genClasses ecoreClass="LatexQ.ecore#//CHECK">

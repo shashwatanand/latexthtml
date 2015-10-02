@@ -54,16 +54,19 @@ public class LatexQSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     answer=STRING
+	 *     (answer=STRING type=Type)
 	 */
 	protected void sequence_Answer(EObject context, Answer semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, LatexQPackage.Literals.ANSWER__ANSWER) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LatexQPackage.Literals.ANSWER__ANSWER));
+			if(transientValues.isValueTransient(semanticObject, LatexQPackage.Literals.ANSWER__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LatexQPackage.Literals.ANSWER__TYPE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getAnswerAccess().getAnswerSTRINGTerminalRuleCall_1_0(), semanticObject.getAnswer());
+		feeder.accept(grammarAccess.getAnswerAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
 		feeder.finish();
 	}
 	
@@ -95,7 +98,7 @@ public class LatexQSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (question=STRING type=Type answers+=Answer+)
+	 *     (question=STRING answers+=Answer+)
 	 */
 	protected void sequence_Question(EObject context, Question semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

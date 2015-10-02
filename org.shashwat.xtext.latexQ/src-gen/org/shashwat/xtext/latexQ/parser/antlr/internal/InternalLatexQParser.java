@@ -268,27 +268,25 @@ public class InternalLatexQParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQuestion"
-    // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:137:1: ruleQuestion returns [EObject current=null] : (otherlv_0= 'Question' ( (lv_question_1_0= RULE_STRING ) ) ( (lv_type_2_0= ruleType ) ) otherlv_3= '{' ( (lv_answers_4_0= ruleAnswer ) )+ otherlv_5= '}' ) ;
+    // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:137:1: ruleQuestion returns [EObject current=null] : (otherlv_0= 'Question' ( (lv_question_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_answers_3_0= ruleAnswer ) )+ otherlv_4= '}' ) ;
     public final EObject ruleQuestion() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_question_1_0=null;
-        Token otherlv_3=null;
-        Token otherlv_5=null;
-        EObject lv_type_2_0 = null;
-
-        EObject lv_answers_4_0 = null;
+        Token otherlv_2=null;
+        Token otherlv_4=null;
+        EObject lv_answers_3_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:140:28: ( (otherlv_0= 'Question' ( (lv_question_1_0= RULE_STRING ) ) ( (lv_type_2_0= ruleType ) ) otherlv_3= '{' ( (lv_answers_4_0= ruleAnswer ) )+ otherlv_5= '}' ) )
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:141:1: (otherlv_0= 'Question' ( (lv_question_1_0= RULE_STRING ) ) ( (lv_type_2_0= ruleType ) ) otherlv_3= '{' ( (lv_answers_4_0= ruleAnswer ) )+ otherlv_5= '}' )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:140:28: ( (otherlv_0= 'Question' ( (lv_question_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_answers_3_0= ruleAnswer ) )+ otherlv_4= '}' ) )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:141:1: (otherlv_0= 'Question' ( (lv_question_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_answers_3_0= ruleAnswer ) )+ otherlv_4= '}' )
             {
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:141:1: (otherlv_0= 'Question' ( (lv_question_1_0= RULE_STRING ) ) ( (lv_type_2_0= ruleType ) ) otherlv_3= '{' ( (lv_answers_4_0= ruleAnswer ) )+ otherlv_5= '}' )
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:141:3: otherlv_0= 'Question' ( (lv_question_1_0= RULE_STRING ) ) ( (lv_type_2_0= ruleType ) ) otherlv_3= '{' ( (lv_answers_4_0= ruleAnswer ) )+ otherlv_5= '}'
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:141:1: (otherlv_0= 'Question' ( (lv_question_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_answers_3_0= ruleAnswer ) )+ otherlv_4= '}' )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:141:3: otherlv_0= 'Question' ( (lv_question_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_answers_3_0= ruleAnswer ) )+ otherlv_4= '}'
             {
             otherlv_0=(Token)match(input,12,FOLLOW_12_in_ruleQuestion249); 
 
@@ -320,42 +318,11 @@ public class InternalLatexQParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:163:2: ( (lv_type_2_0= ruleType ) )
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:164:1: (lv_type_2_0= ruleType )
-            {
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:164:1: (lv_type_2_0= ruleType )
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:165:3: lv_type_2_0= ruleType
-            {
-             
-            	        newCompositeNode(grammarAccess.getQuestionAccess().getTypeTypeParserRuleCall_2_0()); 
-            	    
-            pushFollow(FOLLOW_ruleType_in_ruleQuestion292);
-            lv_type_2_0=ruleType();
+            otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleQuestion283); 
 
-            state._fsp--;
-
-
-            	        if (current==null) {
-            	            current = createModelElementForParent(grammarAccess.getQuestionRule());
-            	        }
-                   		set(
-                   			current, 
-                   			"type",
-                    		lv_type_2_0, 
-                    		"Type");
-            	        afterParserOrEnumRuleCall();
-            	    
-
-            }
-
-
-            }
-
-            otherlv_3=(Token)match(input,13,FOLLOW_13_in_ruleQuestion304); 
-
-                	newLeafNode(otherlv_3, grammarAccess.getQuestionAccess().getLeftCurlyBracketKeyword_3());
+                	newLeafNode(otherlv_2, grammarAccess.getQuestionAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:185:1: ( (lv_answers_4_0= ruleAnswer ) )+
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:167:1: ( (lv_answers_3_0= ruleAnswer ) )+
             int cnt2=0;
             loop2:
             do {
@@ -369,16 +336,16 @@ public class InternalLatexQParser extends AbstractInternalAntlrParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:186:1: (lv_answers_4_0= ruleAnswer )
+            	    // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:168:1: (lv_answers_3_0= ruleAnswer )
             	    {
-            	    // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:186:1: (lv_answers_4_0= ruleAnswer )
-            	    // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:187:3: lv_answers_4_0= ruleAnswer
+            	    // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:168:1: (lv_answers_3_0= ruleAnswer )
+            	    // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:169:3: lv_answers_3_0= ruleAnswer
             	    {
             	     
-            	    	        newCompositeNode(grammarAccess.getQuestionAccess().getAnswersAnswerParserRuleCall_4_0()); 
+            	    	        newCompositeNode(grammarAccess.getQuestionAccess().getAnswersAnswerParserRuleCall_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAnswer_in_ruleQuestion325);
-            	    lv_answers_4_0=ruleAnswer();
+            	    pushFollow(FOLLOW_ruleAnswer_in_ruleQuestion304);
+            	    lv_answers_3_0=ruleAnswer();
 
             	    state._fsp--;
 
@@ -389,7 +356,7 @@ public class InternalLatexQParser extends AbstractInternalAntlrParser {
             	           		add(
             	           			current, 
             	           			"answers",
-            	            		lv_answers_4_0, 
+            	            		lv_answers_3_0, 
             	            		"Answer");
             	    	        afterParserOrEnumRuleCall();
             	    	    
@@ -409,9 +376,9 @@ public class InternalLatexQParser extends AbstractInternalAntlrParser {
                 cnt2++;
             } while (true);
 
-            otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleQuestion338); 
+            otherlv_4=(Token)match(input,14,FOLLOW_14_in_ruleQuestion317); 
 
-                	newLeafNode(otherlv_5, grammarAccess.getQuestionAccess().getRightCurlyBracketKeyword_5());
+                	newLeafNode(otherlv_4, grammarAccess.getQuestionAccess().getRightCurlyBracketKeyword_4());
                 
 
             }
@@ -434,7 +401,7 @@ public class InternalLatexQParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAnswer"
-    // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:215:1: entryRuleAnswer returns [EObject current=null] : iv_ruleAnswer= ruleAnswer EOF ;
+    // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:197:1: entryRuleAnswer returns [EObject current=null] : iv_ruleAnswer= ruleAnswer EOF ;
     public final EObject entryRuleAnswer() throws RecognitionException {
         EObject current = null;
 
@@ -442,17 +409,17 @@ public class InternalLatexQParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:216:2: (iv_ruleAnswer= ruleAnswer EOF )
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:217:2: iv_ruleAnswer= ruleAnswer EOF
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:198:2: (iv_ruleAnswer= ruleAnswer EOF )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:199:2: iv_ruleAnswer= ruleAnswer EOF
             {
              newCompositeNode(grammarAccess.getAnswerRule()); 
-            pushFollow(FOLLOW_ruleAnswer_in_entryRuleAnswer374);
+            pushFollow(FOLLOW_ruleAnswer_in_entryRuleAnswer353);
             iv_ruleAnswer=ruleAnswer();
 
             state._fsp--;
 
              current =iv_ruleAnswer; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAnswer384); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAnswer363); 
 
             }
 
@@ -470,33 +437,35 @@ public class InternalLatexQParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnswer"
-    // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:224:1: ruleAnswer returns [EObject current=null] : (otherlv_0= 'Answer' ( (lv_answer_1_0= RULE_STRING ) ) ) ;
+    // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:206:1: ruleAnswer returns [EObject current=null] : (otherlv_0= 'Answer' ( (lv_answer_1_0= RULE_STRING ) ) ( (lv_type_2_0= ruleType ) ) ) ;
     public final EObject ruleAnswer() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_answer_1_0=null;
+        EObject lv_type_2_0 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:227:28: ( (otherlv_0= 'Answer' ( (lv_answer_1_0= RULE_STRING ) ) ) )
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:228:1: (otherlv_0= 'Answer' ( (lv_answer_1_0= RULE_STRING ) ) )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:209:28: ( (otherlv_0= 'Answer' ( (lv_answer_1_0= RULE_STRING ) ) ( (lv_type_2_0= ruleType ) ) ) )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:210:1: (otherlv_0= 'Answer' ( (lv_answer_1_0= RULE_STRING ) ) ( (lv_type_2_0= ruleType ) ) )
             {
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:228:1: (otherlv_0= 'Answer' ( (lv_answer_1_0= RULE_STRING ) ) )
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:228:3: otherlv_0= 'Answer' ( (lv_answer_1_0= RULE_STRING ) )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:210:1: (otherlv_0= 'Answer' ( (lv_answer_1_0= RULE_STRING ) ) ( (lv_type_2_0= ruleType ) ) )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:210:3: otherlv_0= 'Answer' ( (lv_answer_1_0= RULE_STRING ) ) ( (lv_type_2_0= ruleType ) )
             {
-            otherlv_0=(Token)match(input,15,FOLLOW_15_in_ruleAnswer421); 
+            otherlv_0=(Token)match(input,15,FOLLOW_15_in_ruleAnswer400); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getAnswerAccess().getAnswerKeyword_0());
                 
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:232:1: ( (lv_answer_1_0= RULE_STRING ) )
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:233:1: (lv_answer_1_0= RULE_STRING )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:214:1: ( (lv_answer_1_0= RULE_STRING ) )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:215:1: (lv_answer_1_0= RULE_STRING )
             {
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:233:1: (lv_answer_1_0= RULE_STRING )
-            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:234:3: lv_answer_1_0= RULE_STRING
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:215:1: (lv_answer_1_0= RULE_STRING )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:216:3: lv_answer_1_0= RULE_STRING
             {
-            lv_answer_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleAnswer438); 
+            lv_answer_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleAnswer417); 
 
             			newLeafNode(lv_answer_1_0, grammarAccess.getAnswerAccess().getAnswerSTRINGTerminalRuleCall_1_0()); 
             		
@@ -509,6 +478,37 @@ public class InternalLatexQParser extends AbstractInternalAntlrParser {
                    			"answer",
                     		lv_answer_1_0, 
                     		"STRING");
+            	    
+
+            }
+
+
+            }
+
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:232:2: ( (lv_type_2_0= ruleType ) )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:233:1: (lv_type_2_0= ruleType )
+            {
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:233:1: (lv_type_2_0= ruleType )
+            // ../org.shashwat.xtext.latexQ/src-gen/org/shashwat/xtext/latexQ/parser/antlr/internal/InternalLatexQ.g:234:3: lv_type_2_0= ruleType
+            {
+             
+            	        newCompositeNode(grammarAccess.getAnswerAccess().getTypeTypeParserRuleCall_2_0()); 
+            	    
+            pushFollow(FOLLOW_ruleType_in_ruleAnswer443);
+            lv_type_2_0=ruleType();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getAnswerRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"type",
+                    		lv_type_2_0, 
+                    		"Type");
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -849,15 +849,15 @@ public class InternalLatexQParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleQuestion_in_entryRuleQuestion202 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleQuestion212 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_12_in_ruleQuestion249 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleQuestion266 = new BitSet(new long[]{0x0000000000030000L});
-    public static final BitSet FOLLOW_ruleType_in_ruleQuestion292 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleQuestion304 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_ruleAnswer_in_ruleQuestion325 = new BitSet(new long[]{0x000000000000C000L});
-    public static final BitSet FOLLOW_14_in_ruleQuestion338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnswer_in_entryRuleAnswer374 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAnswer384 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleAnswer421 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleAnswer438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleQuestion266 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_ruleQuestion283 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_ruleAnswer_in_ruleQuestion304 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_14_in_ruleQuestion317 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnswer_in_entryRuleAnswer353 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAnswer363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_ruleAnswer400 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleAnswer417 = new BitSet(new long[]{0x0000000000030000L});
+    public static final BitSet FOLLOW_ruleType_in_ruleAnswer443 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleType_in_entryRuleType479 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleType489 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCHECK_in_ruleType536 = new BitSet(new long[]{0x0000000000000002L});

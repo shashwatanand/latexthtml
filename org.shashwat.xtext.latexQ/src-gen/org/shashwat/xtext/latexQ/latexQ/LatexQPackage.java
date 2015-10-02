@@ -113,22 +113,13 @@ public interface LatexQPackage extends EPackage
   int QUESTION__QUESTION = 0;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUESTION__TYPE = 1;
-
-  /**
    * The feature id for the '<em><b>Answers</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QUESTION__ANSWERS = 2;
+  int QUESTION__ANSWERS = 1;
 
   /**
    * The number of structural features of the '<em>Question</em>' class.
@@ -137,7 +128,7 @@ public interface LatexQPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUESTION_FEATURE_COUNT = 3;
+  int QUESTION_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.shashwat.xtext.latexQ.latexQ.impl.AnswerImpl <em>Answer</em>}' class.
@@ -159,13 +150,22 @@ public interface LatexQPackage extends EPackage
   int ANSWER__ANSWER = 0;
 
   /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANSWER__TYPE = 1;
+
+  /**
    * The number of structural features of the '<em>Answer</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ANSWER_FEATURE_COUNT = 1;
+  int ANSWER_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.shashwat.xtext.latexQ.latexQ.impl.TypeImpl <em>Type</em>}' class.
@@ -297,17 +297,6 @@ public interface LatexQPackage extends EPackage
   EAttribute getQuestion_Question();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.shashwat.xtext.latexQ.latexQ.Question#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Type</em>'.
-   * @see org.shashwat.xtext.latexQ.latexQ.Question#getType()
-   * @see #getQuestion()
-   * @generated
-   */
-  EReference getQuestion_Type();
-
-  /**
    * Returns the meta object for the containment reference list '{@link org.shashwat.xtext.latexQ.latexQ.Question#getAnswers <em>Answers</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -338,6 +327,17 @@ public interface LatexQPackage extends EPackage
    * @generated
    */
   EAttribute getAnswer_Answer();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.shashwat.xtext.latexQ.latexQ.Answer#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type</em>'.
+   * @see org.shashwat.xtext.latexQ.latexQ.Answer#getType()
+   * @see #getAnswer()
+   * @generated
+   */
+  EReference getAnswer_Type();
 
   /**
    * Returns the meta object for class '{@link org.shashwat.xtext.latexQ.latexQ.Type <em>Type</em>}'.
@@ -459,14 +459,6 @@ public interface LatexQPackage extends EPackage
     EAttribute QUESTION__QUESTION = eINSTANCE.getQuestion_Question();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference QUESTION__TYPE = eINSTANCE.getQuestion_Type();
-
-    /**
      * The meta object literal for the '<em><b>Answers</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -491,6 +483,14 @@ public interface LatexQPackage extends EPackage
      * @generated
      */
     EAttribute ANSWER__ANSWER = eINSTANCE.getAnswer_Answer();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANSWER__TYPE = eINSTANCE.getAnswer_Type();
 
     /**
      * The meta object literal for the '{@link org.shashwat.xtext.latexQ.latexQ.impl.TypeImpl <em>Type</em>}' class.

@@ -7,6 +7,8 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 import org.shashwat.xtext.latexQ.latexQ.QuestionPaper
+import org.shashwat.xtext.latexQ.latexQ.Question
+import org.shashwat.xtext.latexQ.latexQ.Answer
 
 /**
  * Generates code from your model files on save.
@@ -21,10 +23,59 @@ class LatexQGenerator implements IGenerator {
 		}
 	}
 	
+	//<link href="http://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css" rel="stylesheet" />
+	//<script src="http://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js" />
+	
 	def compile(QuestionPaper qp) '''
-		<!DOCTYPE>
-		<html>
-			<link></link>
+		<!DOCTYPE html>
+		<html lang="en">
+			<head>
+				<meta charset="UTF-8">
+				«IF qp.papername != null»
+					<title>«qp.papername»</title>
+				«ELSE»
+					<title>Questions</title>
+				«ENDIF»
+			</head>
+			<body>
+				<ol>
+				«FOR q:qp.questions»
+					<li>
+					«q.compile»
+					</li>
+				«ENDFOR»
+					
+				</ol>
+				
+			</body>
 		</html>
+	'''
+	
+	def compile(Question q) '''
+		<section>
+			<p>«q.question»</p>
+			<ul>
+				«FOR a:q.answers»
+					<li>
+					«a.compile»
+					</li>
+				«ENDFOR»
+				
+			</ul>
+			
+		</section>
+	'''
+	
+	def compile(Answer a) '''
+		«IF a.type == null»
+			<p>«a.answer»</p>
+		«ENDIF»
+		«IF a.type == "check"»
+			<p><input type="CHECK">«a.answer»</input></p>
+		«ELSEIF a.type == "radio"»
+			<p><input type="RADIO">«a.answer»</input></p>
+		«ELSE»
+			<p>«a.answer»</p>
+		«ENDIF»
 	'''
 }

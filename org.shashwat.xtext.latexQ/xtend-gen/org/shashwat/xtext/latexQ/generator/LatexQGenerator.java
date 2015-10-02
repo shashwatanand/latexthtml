@@ -3,7 +3,9 @@
  */
 package org.shashwat.xtext.latexQ.generator;
 
+import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -11,7 +13,10 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.shashwat.xtext.latexQ.latexQ.Answer;
+import org.shashwat.xtext.latexQ.latexQ.Question;
 import org.shashwat.xtext.latexQ.latexQ.QuestionPaper;
+import org.shashwat.xtext.latexQ.latexQ.Type;
 
 /**
  * Generates code from your model files on save.
@@ -35,15 +40,151 @@ public class LatexQGenerator implements IGenerator {
   
   public CharSequence compile(final QuestionPaper qp) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("<!DOCTYPE>");
+    _builder.append("<!DOCTYPE html>");
     _builder.newLine();
-    _builder.append("<html>");
+    _builder.append("<html lang=\"en\">");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("<link></link>");
+    _builder.append("<head>");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("<meta charset=\"UTF-8\">");
+    _builder.newLine();
+    {
+      String _papername = qp.getPapername();
+      boolean _notEquals = (!Objects.equal(_papername, null));
+      if (_notEquals) {
+        _builder.append("\t\t");
+        _builder.append("<title>");
+        String _papername_1 = qp.getPapername();
+        _builder.append(_papername_1, "\t\t");
+        _builder.append("</title>");
+        _builder.newLineIfNotEmpty();
+      } else {
+        _builder.append("\t\t");
+        _builder.append("<title>Questions</title>");
+        _builder.newLine();
+      }
+    }
+    _builder.append("\t");
+    _builder.append("</head>");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("<body>");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("<ol>");
+    _builder.newLine();
+    {
+      EList<Question> _questions = qp.getQuestions();
+      for(final Question q : _questions) {
+        _builder.append("\t\t");
+        _builder.append("<li>");
+        _builder.newLine();
+        _builder.append("\t\t");
+        CharSequence _compile = this.compile(q);
+        _builder.append(_compile, "\t\t");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t");
+        _builder.append("</li>");
+        _builder.newLine();
+      }
+    }
+    _builder.append("\t\t\t");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("</ol>");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("</body>");
     _builder.newLine();
     _builder.append("</html>");
     _builder.newLine();
+    return _builder;
+  }
+  
+  public CharSequence compile(final Question q) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("<section>");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("<p>");
+    String _question = q.getQuestion();
+    _builder.append(_question, "\t");
+    _builder.append("</p>");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("<ul>");
+    _builder.newLine();
+    {
+      EList<Answer> _answers = q.getAnswers();
+      for(final Answer a : _answers) {
+        _builder.append("\t\t");
+        _builder.append("<li>");
+        _builder.newLine();
+        _builder.append("\t\t");
+        CharSequence _compile = this.compile(a);
+        _builder.append(_compile, "\t\t");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t");
+        _builder.append("</li>");
+        _builder.newLine();
+      }
+    }
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("</ul>");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("</section>");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public CharSequence compile(final Answer a) {
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      Type _type = a.getType();
+      boolean _equals = Objects.equal(_type, null);
+      if (_equals) {
+        _builder.append("<p>");
+        String _answer = a.getAnswer();
+        _builder.append(_answer, "");
+        _builder.append("</p>");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    {
+      Type _type_1 = a.getType();
+      boolean _equals_1 = Objects.equal(_type_1, "check");
+      if (_equals_1) {
+        _builder.append("<p><input type=\"CHECK\">");
+        String _answer_1 = a.getAnswer();
+        _builder.append(_answer_1, "");
+        _builder.append("</input></p>");
+        _builder.newLineIfNotEmpty();
+      } else {
+        Type _type_2 = a.getType();
+        boolean _equals_2 = Objects.equal(_type_2, "radio");
+        if (_equals_2) {
+          _builder.append("<p><input type=\"RADIO\">");
+          String _answer_2 = a.getAnswer();
+          _builder.append(_answer_2, "");
+          _builder.append("</input></p>");
+          _builder.newLineIfNotEmpty();
+        } else {
+          _builder.append("<p>");
+          String _answer_3 = a.getAnswer();
+          _builder.append(_answer_3, "");
+          _builder.append("</p>");
+          _builder.newLineIfNotEmpty();
+        }
+      }
+    }
     return _builder;
   }
 }

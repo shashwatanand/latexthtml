@@ -56,18 +56,16 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cQuestionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cQuestionAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cQuestionSTRINGTerminalRuleCall_1_0 = (RuleCall)cQuestionAssignment_1.eContents().get(0);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cAnswersAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cAnswersAnswerParserRuleCall_4_0 = (RuleCall)cAnswersAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cAnswersAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cAnswersAnswerParserRuleCall_3_0 = (RuleCall)cAnswersAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Question:
-		//	"Question" question=STRING type=Type "{" answers+=Answer+ "}";
+		//	"Question" question=STRING "{" answers+=Answer+ "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"Question" question=STRING type=Type "{" answers+=Answer+ "}"
+		//"Question" question=STRING "{" answers+=Answer+ "}"
 		public Group getGroup() { return cGroup; }
 
 		//"Question"
@@ -79,23 +77,17 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getQuestionSTRINGTerminalRuleCall_1_0() { return cQuestionSTRINGTerminalRuleCall_1_0; }
 
-		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
-
-		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
-
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//answers+=Answer+
-		public Assignment getAnswersAssignment_4() { return cAnswersAssignment_4; }
+		public Assignment getAnswersAssignment_3() { return cAnswersAssignment_3; }
 
 		//Answer
-		public RuleCall getAnswersAnswerParserRuleCall_4_0() { return cAnswersAnswerParserRuleCall_4_0; }
+		public RuleCall getAnswersAnswerParserRuleCall_3_0() { return cAnswersAnswerParserRuleCall_3_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class AnswerElements extends AbstractParserRuleElementFinder {
@@ -104,12 +96,14 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cAnswerKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cAnswerAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cAnswerSTRINGTerminalRuleCall_1_0 = (RuleCall)cAnswerAssignment_1.eContents().get(0);
+		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
 		
 		//Answer:
-		//	"Answer" answer=STRING;
+		//	"Answer" answer=STRING type=Type;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"Answer" answer=STRING
+		//"Answer" answer=STRING type=Type
 		public Group getGroup() { return cGroup; }
 
 		//"Answer"
@@ -120,6 +114,12 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getAnswerSTRINGTerminalRuleCall_1_0() { return cAnswerSTRINGTerminalRuleCall_1_0; }
+
+		//type=Type
+		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+
+		//Type
+		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
 	}
 
 	public class TypeElements extends AbstractParserRuleElementFinder {
@@ -237,7 +237,7 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Question:
-	//	"Question" question=STRING type=Type "{" answers+=Answer+ "}";
+	//	"Question" question=STRING "{" answers+=Answer+ "}";
 	public QuestionElements getQuestionAccess() {
 		return pQuestion;
 	}
@@ -247,7 +247,7 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Answer:
-	//	"Answer" answer=STRING;
+	//	"Answer" answer=STRING type=Type;
 	public AnswerElements getAnswerAccess() {
 		return pAnswer;
 	}
