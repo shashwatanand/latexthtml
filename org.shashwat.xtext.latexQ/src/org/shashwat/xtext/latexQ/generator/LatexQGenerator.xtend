@@ -46,9 +46,7 @@ class LatexQGenerator implements IGenerator {
 					«q.compile»
 					</li>
 				«ENDFOR»
-					
 				</ol>
-				
 			</body>
 		</html>
 	'''

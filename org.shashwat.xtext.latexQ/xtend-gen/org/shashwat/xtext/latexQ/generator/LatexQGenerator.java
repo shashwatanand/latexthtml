@@ -92,12 +92,8 @@ public class LatexQGenerator implements IGenerator {
         _builder.newLine();
       }
     }
-    _builder.append("\t\t\t");
-    _builder.newLine();
     _builder.append("\t\t");
     _builder.append("</ol>");
-    _builder.newLine();
-    _builder.append("\t\t");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("</body>");
