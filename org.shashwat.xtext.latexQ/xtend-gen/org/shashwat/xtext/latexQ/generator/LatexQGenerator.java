@@ -156,9 +156,7 @@ public class LatexQGenerator implements IGenerator {
     }
     {
       Type _type_1 = a.getType();
-      String _name = CHECK.class.getName();
-      boolean _equals_1 = Objects.equal(_type_1, _name);
-      if (_equals_1) {
+      if ((_type_1 instanceof CHECK)) {
         _builder.append("<p><input type=\"CHECK\">");
         String _answer_1 = a.getAnswer();
         _builder.append(_answer_1, "");
@@ -166,9 +164,7 @@ public class LatexQGenerator implements IGenerator {
         _builder.newLineIfNotEmpty();
       } else {
         Type _type_2 = a.getType();
-        String _name_1 = RADIO.class.getName();
-        boolean _equals_2 = Objects.equal(_type_2, _name_1);
-        if (_equals_2) {
+        if ((_type_2 instanceof RADIO)) {
           _builder.append("<p><input type=\"RADIO\">");
           String _answer_2 = a.getAnswer();
           _builder.append(_answer_2, "");
