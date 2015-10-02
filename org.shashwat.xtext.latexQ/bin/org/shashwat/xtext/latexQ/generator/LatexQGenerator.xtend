@@ -68,9 +68,9 @@ class LatexQGenerator implements IGenerator {
 		«IF a.type == null»
 			<p>«a.answer»</p>
 		«ENDIF»
-		«IF a.type == CHECK.name»
+		«IF a.type instanceof CHECK»
 			<p><input type="CHECK">«a.answer»</input></p>
-		«ELSEIF a.type == RADIO.name»
+		«ELSEIF a.type instanceof RADIO»
 			<p><input type="RADIO">«a.answer»</input></p>
 		«ELSE»
 			<p>«a.answer»</p>
