@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.shashwat.xtext.latexQ.latexQ.Answer;
 import org.shashwat.xtext.latexQ.latexQ.LatexQPackage;
 import org.shashwat.xtext.latexQ.latexQ.Question;
-import org.shashwat.xtext.latexQ.latexQ.Type;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +31,6 @@ import org.shashwat.xtext.latexQ.latexQ.Type;
  * </p>
  * <ul>
  *   <li>{@link org.shashwat.xtext.latexQ.latexQ.impl.QuestionImpl#getQuestion <em>Question</em>}</li>
- *   <li>{@link org.shashwat.xtext.latexQ.latexQ.impl.QuestionImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.shashwat.xtext.latexQ.latexQ.impl.QuestionImpl#getAnswers <em>Answers</em>}</li>
  * </ul>
  *
@@ -59,16 +57,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
    * @ordered
    */
   protected String question = QUESTION_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
-  protected Type type;
 
   /**
    * The cached value of the '{@link #getAnswers() <em>Answers</em>}' containment reference list.
@@ -129,54 +117,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
    * <!-- end-user-doc -->
    * @generated
    */
-  public Type getType()
-  {
-    return type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetType(Type newType, NotificationChain msgs)
-  {
-    Type oldType = type;
-    type = newType;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LatexQPackage.QUESTION__TYPE, oldType, newType);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setType(Type newType)
-  {
-    if (newType != type)
-    {
-      NotificationChain msgs = null;
-      if (type != null)
-        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LatexQPackage.QUESTION__TYPE, null, msgs);
-      if (newType != null)
-        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LatexQPackage.QUESTION__TYPE, null, msgs);
-      msgs = basicSetType(newType, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LatexQPackage.QUESTION__TYPE, newType, newType));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<Answer> getAnswers()
   {
     if (answers == null)
@@ -196,8 +136,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
   {
     switch (featureID)
     {
-      case LatexQPackage.QUESTION__TYPE:
-        return basicSetType(null, msgs);
       case LatexQPackage.QUESTION__ANSWERS:
         return ((InternalEList<?>)getAnswers()).basicRemove(otherEnd, msgs);
     }
@@ -216,8 +154,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
     {
       case LatexQPackage.QUESTION__QUESTION:
         return getQuestion();
-      case LatexQPackage.QUESTION__TYPE:
-        return getType();
       case LatexQPackage.QUESTION__ANSWERS:
         return getAnswers();
     }
@@ -237,9 +173,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
     {
       case LatexQPackage.QUESTION__QUESTION:
         setQuestion((String)newValue);
-        return;
-      case LatexQPackage.QUESTION__TYPE:
-        setType((Type)newValue);
         return;
       case LatexQPackage.QUESTION__ANSWERS:
         getAnswers().clear();
@@ -262,9 +195,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
       case LatexQPackage.QUESTION__QUESTION:
         setQuestion(QUESTION_EDEFAULT);
         return;
-      case LatexQPackage.QUESTION__TYPE:
-        setType((Type)null);
-        return;
       case LatexQPackage.QUESTION__ANSWERS:
         getAnswers().clear();
         return;
@@ -284,8 +214,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
     {
       case LatexQPackage.QUESTION__QUESTION:
         return QUESTION_EDEFAULT == null ? question != null : !QUESTION_EDEFAULT.equals(question);
-      case LatexQPackage.QUESTION__TYPE:
-        return type != null;
       case LatexQPackage.QUESTION__ANSWERS:
         return answers != null && !answers.isEmpty();
     }

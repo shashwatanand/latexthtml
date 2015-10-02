@@ -184,19 +184,9 @@ public class LatexQPackageImpl extends EPackageImpl implements LatexQPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQuestion_Type()
-  {
-    return (EReference)questionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getQuestion_Answers()
   {
-    return (EReference)questionEClass.getEStructuralFeatures().get(2);
+    return (EReference)questionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -217,6 +207,16 @@ public class LatexQPackageImpl extends EPackageImpl implements LatexQPackage
   public EAttribute getAnswer_Answer()
   {
     return (EAttribute)answerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAnswer_Type()
+  {
+    return (EReference)answerEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -305,11 +305,11 @@ public class LatexQPackageImpl extends EPackageImpl implements LatexQPackage
 
     questionEClass = createEClass(QUESTION);
     createEAttribute(questionEClass, QUESTION__QUESTION);
-    createEReference(questionEClass, QUESTION__TYPE);
     createEReference(questionEClass, QUESTION__ANSWERS);
 
     answerEClass = createEClass(ANSWER);
     createEAttribute(answerEClass, ANSWER__ANSWER);
+    createEReference(answerEClass, ANSWER__TYPE);
 
     typeEClass = createEClass(TYPE);
 
@@ -359,11 +359,11 @@ public class LatexQPackageImpl extends EPackageImpl implements LatexQPackage
 
     initEClass(questionEClass, Question.class, "Question", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQuestion_Question(), ecorePackage.getEString(), "question", null, 0, 1, Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQuestion_Type(), this.getType(), null, "type", null, 0, 1, Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQuestion_Answers(), this.getAnswer(), null, "answers", null, 0, -1, Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(answerEClass, Answer.class, "Answer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAnswer_Answer(), ecorePackage.getEString(), "answer", null, 0, 1, Answer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAnswer_Type(), this.getType(), null, "type", null, 0, 1, Answer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
