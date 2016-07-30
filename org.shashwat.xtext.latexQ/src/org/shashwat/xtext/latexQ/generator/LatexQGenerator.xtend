@@ -11,6 +11,7 @@ import org.shashwat.xtext.latexQ.latexQ.Question
 import org.shashwat.xtext.latexQ.latexQ.Answer
 import org.shashwat.xtext.latexQ.latexQ.CHECK
 import org.shashwat.xtext.latexQ.latexQ.RADIO
+import org.shashwat.xtext.latexQ.latexQ.Type
 
 /**
  * Generates code from your model files on save.
@@ -40,6 +41,34 @@ class LatexQGenerator implements IGenerator {
 				«ENDIF»
 			</head>
 			<body>
+				<form>
+					<ol>
+					«FOR q:qp.questions»
+						<li>
+							«q.compile»
+						</li>
+					«ENDFOR»
+					</ol>
+				</form>
+			</body>
+		</html>
+	'''
+	
+	
+	/*def compile(QuestionPaper qp) '''
+		<!DOCTYPE html>
+		<html lang="en">
+			<head>
+				<meta charset="UTF-8">
+				«IF qp.papername != null»
+					<title>«qp.papername»</title>
+				«ELSE»
+					<title>Questions</title>
+				«ENDIF»
+				<link rel="stylesheet" href="katex.min.css">
+				<script src="katex.min.js"></script>
+			</head>
+			<body>
 				<ol>
 				«FOR q:qp.questions»
 					<li>
@@ -49,7 +78,7 @@ class LatexQGenerator implements IGenerator {
 				</ol>
 			</body>
 		</html>
-	'''
+	'''*/
 	
 	def compile(Question q) '''
 		<section>
@@ -57,23 +86,36 @@ class LatexQGenerator implements IGenerator {
 			<ul>
 				«FOR a:q.answers»
 					<li>
-						«a.compile»
+						«a.compile(q.type)»
 					</li>
 				«ENDFOR»
 			</ul>
 		</section>
 	'''
 	
-	def compile(Answer a) '''
-		«IF a.type == null»
+	def compile(Answer a, Type type) '''
+		«IF type == null»
 			<p>«a.answer»</p>
 		«ENDIF»
-		«IF a.type instanceof CHECK»
-			<p><input type="CHECK">«a.answer»</input></p>
-		«ELSEIF a.type instanceof RADIO»
-			<p><input type="RADIO">«a.answer»</input></p>
+		«IF type instanceof CHECK»
+			<p><input type="check">«a.answer»</input>"</p>
+		«ELSEIF type instanceof RADIO»
+			<p><input type="radio">«a.answer»</input></p>
 		«ELSE»
 			<p>«a.answer»</p>
 		«ENDIF»
 	'''
+	
+	/*def compile(Answer a, Type type) '''
+		«IF type == null»
+			<p>«a.answer»</p>
+		«ENDIF»
+		«IF type instanceof CHECK»
+			<p><script>katex.render("f(a,b,c) = (a^2+b^2+c^2)^3")«a.answer»</script></p>
+		«ELSEIF type instanceof RADIO»
+			<p><button type="RADIO">«a.answer»</button></p>
+		«ELSE»
+			<p>«a.answer»</p>
+		«ENDIF»
+	'''*/
 }

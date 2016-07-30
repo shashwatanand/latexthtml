@@ -75,26 +75,32 @@ public class LatexQGenerator implements IGenerator {
     _builder.append("<body>");
     _builder.newLine();
     _builder.append("\t\t");
+    _builder.append("<form>");
+    _builder.newLine();
+    _builder.append("\t\t\t");
     _builder.append("<ol>");
     _builder.newLine();
     {
       EList<Question> _questions = qp.getQuestions();
       for(final Question q : _questions) {
-        _builder.append("\t\t");
+        _builder.append("\t\t\t");
         _builder.append("<li>");
         _builder.newLine();
-        _builder.append("\t\t");
+        _builder.append("\t\t\t");
         _builder.append("\t");
         CharSequence _compile = this.compile(q);
-        _builder.append(_compile, "\t\t\t");
+        _builder.append(_compile, "\t\t\t\t");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t\t");
+        _builder.append("\t\t\t");
         _builder.append("</li>");
         _builder.newLine();
       }
     }
-    _builder.append("\t\t");
+    _builder.append("\t\t\t");
     _builder.append("</ol>");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("</form>");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("</body>");
@@ -104,6 +110,32 @@ public class LatexQGenerator implements IGenerator {
     return _builder;
   }
   
+  /**
+   * def compile(QuestionPaper qp) '''
+   * <!DOCTYPE html>
+   * <html lang="en">
+   * <head>
+   * <meta charset="UTF-8">
+   * «IF qp.papername != null»
+   * <title>«qp.papername»</title>
+   * «ELSE»
+   * <title>Questions</title>
+   * «ENDIF»
+   * <link rel="stylesheet" href="katex.min.css">
+   * <script src="katex.min.js"></script>
+   * </head>
+   * <body>
+   * <ol>
+   * «FOR q:qp.questions»
+   * <li>
+   * «q.compile»
+   * </li>
+   * «ENDFOR»
+   * </ol>
+   * </body>
+   * </html>
+   * '''
+   */
   public CharSequence compile(final Question q) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("<section>");
@@ -125,7 +157,8 @@ public class LatexQGenerator implements IGenerator {
         _builder.newLine();
         _builder.append("\t\t");
         _builder.append("\t");
-        CharSequence _compile = this.compile(a);
+        Type _type = q.getType();
+        CharSequence _compile = this.compile(a, _type);
         _builder.append(_compile, "\t\t\t");
         _builder.newLineIfNotEmpty();
         _builder.append("\t\t");
@@ -141,11 +174,10 @@ public class LatexQGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compile(final Answer a) {
+  public CharSequence compile(final Answer a, final Type type) {
     StringConcatenation _builder = new StringConcatenation();
     {
-      Type _type = a.getType();
-      boolean _equals = Objects.equal(_type, null);
+      boolean _equals = Objects.equal(type, null);
       if (_equals) {
         _builder.append("<p>");
         String _answer = a.getAnswer();
@@ -155,17 +187,15 @@ public class LatexQGenerator implements IGenerator {
       }
     }
     {
-      Type _type_1 = a.getType();
-      if ((_type_1 instanceof CHECK)) {
-        _builder.append("<p><input type=\"CHECK\">");
+      if ((type instanceof CHECK)) {
+        _builder.append("<p><input type=\"check\">");
         String _answer_1 = a.getAnswer();
         _builder.append(_answer_1, "");
-        _builder.append("</input></p>");
+        _builder.append("</input>\"</p>");
         _builder.newLineIfNotEmpty();
       } else {
-        Type _type_2 = a.getType();
-        if ((_type_2 instanceof RADIO)) {
-          _builder.append("<p><input type=\"RADIO\">");
+        if ((type instanceof RADIO)) {
+          _builder.append("<p><input type=\"radio\">");
           String _answer_2 = a.getAnswer();
           _builder.append(_answer_2, "");
           _builder.append("</input></p>");

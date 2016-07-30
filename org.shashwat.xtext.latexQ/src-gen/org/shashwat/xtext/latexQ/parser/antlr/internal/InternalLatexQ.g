@@ -95,7 +95,7 @@ ruleQuestionPaper returns [EObject current=null]
        			$current, 
        			"papername",
         		lv_papername_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -112,7 +112,7 @@ ruleQuestionPaper returns [EObject current=null]
        			$current, 
        			"questions",
         		lv_questions_2_0, 
-        		"Question");
+        		"org.shashwat.xtext.latexQ.LatexQ.Question");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -156,7 +156,7 @@ ruleQuestion returns [EObject current=null]
        			$current, 
        			"question",
         		lv_question_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -167,24 +167,42 @@ ruleQuestion returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQuestionAccess().getAnswersAnswerParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getQuestionAccess().getTypeTypeParserRuleCall_3_0()); 
 	    }
-		lv_answers_3_0=ruleAnswer		{
+		lv_type_3_0=ruleType		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getQuestionRule());
+	        }
+       		set(
+       			$current, 
+       			"type",
+        		lv_type_3_0, 
+        		"org.shashwat.xtext.latexQ.LatexQ.Type");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getQuestionAccess().getAnswersAnswerParserRuleCall_4_0()); 
+	    }
+		lv_answers_4_0=ruleAnswer		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getQuestionRule());
 	        }
        		add(
        			$current, 
        			"answers",
-        		lv_answers_3_0, 
-        		"Answer");
+        		lv_answers_4_0, 
+        		"org.shashwat.xtext.latexQ.LatexQ.Answer");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)+	otherlv_4='}' 
+)+	otherlv_5='}' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getQuestionAccess().getRightCurlyBracketKeyword_4());
+    	newLeafNode(otherlv_5, grammarAccess.getQuestionAccess().getRightCurlyBracketKeyword_5());
     }
 )
 ;
@@ -225,25 +243,7 @@ ruleAnswer returns [EObject current=null]
        			$current, 
        			"answer",
         		lv_answer_1_0, 
-        		"STRING");
-	    }
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getAnswerAccess().getTypeTypeParserRuleCall_2_0()); 
-	    }
-		lv_type_2_0=ruleType		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getAnswerRule());
-	        }
-       		set(
-       			$current, 
-       			"type",
-        		lv_type_2_0, 
-        		"Type");
-	        afterParserOrEnumRuleCall();
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )

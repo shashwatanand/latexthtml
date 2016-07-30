@@ -9,13 +9,14 @@ QuestionPaper:
 	
 Question:
 	'Question' question=STRING '{'
+		type=Type
 		(answers+=Answer)+
 	'}'
 ;
 	
 Answer:
 	'Answer' answer=STRING
-	type=Type
+	//type=Type
 ;
 
 Type:

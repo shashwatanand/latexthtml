@@ -44,9 +44,9 @@ public class LatexQParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQuestionPaperAccess().getPapernameAssignment_1(), "rule__QuestionPaper__PapernameAssignment_1");
 					put(grammarAccess.getQuestionPaperAccess().getQuestionsAssignment_2(), "rule__QuestionPaper__QuestionsAssignment_2");
 					put(grammarAccess.getQuestionAccess().getQuestionAssignment_1(), "rule__Question__QuestionAssignment_1");
-					put(grammarAccess.getQuestionAccess().getAnswersAssignment_3(), "rule__Question__AnswersAssignment_3");
+					put(grammarAccess.getQuestionAccess().getTypeAssignment_3(), "rule__Question__TypeAssignment_3");
+					put(grammarAccess.getQuestionAccess().getAnswersAssignment_4(), "rule__Question__AnswersAssignment_4");
 					put(grammarAccess.getAnswerAccess().getAnswerAssignment_1(), "rule__Answer__AnswerAssignment_1");
-					put(grammarAccess.getAnswerAccess().getTypeAssignment_2(), "rule__Answer__TypeAssignment_2");
 					put(grammarAccess.getCHECKAccess().getCheckAssignment(), "rule__CHECK__CheckAssignment");
 					put(grammarAccess.getRADIOAccess().getRadioAssignment(), "rule__RADIO__RadioAssignment");
 				}

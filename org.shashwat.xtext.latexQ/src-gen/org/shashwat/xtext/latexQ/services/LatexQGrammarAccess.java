@@ -19,7 +19,7 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	public class QuestionPaperElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QuestionPaper");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.shashwat.xtext.latexQ.LatexQ.QuestionPaper");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPapernameKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cPapernameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -28,13 +28,14 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cQuestionsQuestionParserRuleCall_2_0 = (RuleCall)cQuestionsAssignment_2.eContents().get(0);
 		
 		//QuestionPaper:
-		//	"papername" papername=ID questions+=Question*;
+		//	'papername' papername=ID
+		//	questions+=Question*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"papername" papername=ID questions+=Question*
+		//'papername' papername=ID questions+=Question*
 		public Group getGroup() { return cGroup; }
 
-		//"papername"
+		//'papername'
 		public Keyword getPapernameKeyword_0() { return cPapernameKeyword_0; }
 
 		//papername=ID
@@ -51,24 +52,29 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class QuestionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Question");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.shashwat.xtext.latexQ.LatexQ.Question");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cQuestionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cQuestionAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cQuestionSTRINGTerminalRuleCall_1_0 = (RuleCall)cQuestionAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cAnswersAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cAnswersAnswerParserRuleCall_3_0 = (RuleCall)cAnswersAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cAnswersAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cAnswersAnswerParserRuleCall_4_0 = (RuleCall)cAnswersAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Question:
-		//	"Question" question=STRING "{" answers+=Answer+ "}";
+		//	'Question' question=STRING '{'
+		//	type=Type
+		//	answers+=Answer+
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"Question" question=STRING "{" answers+=Answer+ "}"
+		//'Question' question=STRING '{' type=Type answers+=Answer+ '}'
 		public Group getGroup() { return cGroup; }
 
-		//"Question"
+		//'Question'
 		public Keyword getQuestionKeyword_0() { return cQuestionKeyword_0; }
 
 		//question=STRING
@@ -77,36 +83,42 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getQuestionSTRINGTerminalRuleCall_1_0() { return cQuestionSTRINGTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
+		//type=Type
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
+
+		//Type
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
+
 		//answers+=Answer+
-		public Assignment getAnswersAssignment_3() { return cAnswersAssignment_3; }
+		public Assignment getAnswersAssignment_4() { return cAnswersAssignment_4; }
 
 		//Answer
-		public RuleCall getAnswersAnswerParserRuleCall_3_0() { return cAnswersAnswerParserRuleCall_3_0; }
+		public RuleCall getAnswersAnswerParserRuleCall_4_0() { return cAnswersAnswerParserRuleCall_4_0; }
 
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class AnswerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Answer");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.shashwat.xtext.latexQ.LatexQ.Answer");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAnswerKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cAnswerAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cAnswerSTRINGTerminalRuleCall_1_0 = (RuleCall)cAnswerAssignment_1.eContents().get(0);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
 		
 		//Answer:
-		//	"Answer" answer=STRING type=Type;
+		//	'Answer' answer=STRING
+		//	//type=Type
+		//;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"Answer" answer=STRING type=Type
+		//'Answer' answer=STRING
 		public Group getGroup() { return cGroup; }
 
-		//"Answer"
+		//'Answer'
 		public Keyword getAnswerKeyword_0() { return cAnswerKeyword_0; }
 
 		//answer=STRING
@@ -114,16 +126,10 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getAnswerSTRINGTerminalRuleCall_1_0() { return cAnswerSTRINGTerminalRuleCall_1_0; }
-
-		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
-
-		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
 	}
 
 	public class TypeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Type");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.shashwat.xtext.latexQ.LatexQ.Type");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cCHECKParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cRADIOParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -143,34 +149,34 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class CHECKElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CHECK");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.shashwat.xtext.latexQ.LatexQ.CHECK");
 		private final Assignment cCheckAssignment = (Assignment)rule.eContents().get(1);
 		private final Keyword cCheckCheckKeyword_0 = (Keyword)cCheckAssignment.eContents().get(0);
 		
 		//CHECK:
-		//	check?="check";
+		//	check?='check';
 		@Override public ParserRule getRule() { return rule; }
 
-		//check?="check"
+		//check?='check'
 		public Assignment getCheckAssignment() { return cCheckAssignment; }
 
-		//"check"
+		//'check'
 		public Keyword getCheckCheckKeyword_0() { return cCheckCheckKeyword_0; }
 	}
 
 	public class RADIOElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RADIO");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.shashwat.xtext.latexQ.LatexQ.RADIO");
 		private final Assignment cRadioAssignment = (Assignment)rule.eContents().get(1);
 		private final Keyword cRadioRadioKeyword_0 = (Keyword)cRadioAssignment.eContents().get(0);
 		
 		//RADIO:
-		//	radio?="radio";
+		//	radio?='radio';
 		@Override public ParserRule getRule() { return rule; }
 
-		//radio?="radio"
+		//radio?='radio'
 		public Assignment getRadioAssignment() { return cRadioAssignment; }
 
-		//"radio"
+		//'radio'
 		public Keyword getRadioRadioKeyword_0() { return cRadioRadioKeyword_0; }
 	}
 	
@@ -227,7 +233,8 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//QuestionPaper:
-	//	"papername" papername=ID questions+=Question*;
+	//	'papername' papername=ID
+	//	questions+=Question*;
 	public QuestionPaperElements getQuestionPaperAccess() {
 		return pQuestionPaper;
 	}
@@ -237,7 +244,10 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Question:
-	//	"Question" question=STRING "{" answers+=Answer+ "}";
+	//	'Question' question=STRING '{'
+	//	type=Type
+	//	answers+=Answer+
+	//	'}';
 	public QuestionElements getQuestionAccess() {
 		return pQuestion;
 	}
@@ -247,7 +257,9 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Answer:
-	//	"Answer" answer=STRING type=Type;
+	//	'Answer' answer=STRING
+	//	//type=Type
+	//;
 	public AnswerElements getAnswerAccess() {
 		return pAnswer;
 	}
@@ -267,7 +279,7 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CHECK:
-	//	check?="check";
+	//	check?='check';
 	public CHECKElements getCHECKAccess() {
 		return pCHECK;
 	}
@@ -277,7 +289,7 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RADIO:
-	//	radio?="radio";
+	//	radio?='radio';
 	public RADIOElements getRADIOAccess() {
 		return pRADIO;
 	}
@@ -287,38 +299,37 @@ public class LatexQGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//terminal ID:
-	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
+	//	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
 	public TerminalRule getIDRule() {
 		return gaTerminals.getIDRule();
 	} 
 
 	//terminal INT returns ecore::EInt:
-	//	"0".."9"+;
+	//	'0'..'9'+;
 	public TerminalRule getINTRule() {
 		return gaTerminals.getINTRule();
 	} 
 
 	//terminal STRING:
-	//	"\"" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\""))* "\"" | "\'" ("\\" .
-	//	/ * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\'"))* "\'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 
 
 	//terminal ML_COMMENT:
-	//	"/ *"->"* /";
+	//	'/ *'->'* /';
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
 	} 
 
 	//terminal SL_COMMENT:
-	//	"//" !("\n" | "\r")* ("\r"? "\n")?;
+	//	'//' !('\n' | '\r')* ('\r'? '\n')?;
 	public TerminalRule getSL_COMMENTRule() {
 		return gaTerminals.getSL_COMMENTRule();
 	} 
 
 	//terminal WS:
-	//	(" " | "\t" | "\r" | "\n")+;
+	//	' ' | '\t' | '\r' | '\n'+;
 	public TerminalRule getWSRule() {
 		return gaTerminals.getWSRule();
 	} 

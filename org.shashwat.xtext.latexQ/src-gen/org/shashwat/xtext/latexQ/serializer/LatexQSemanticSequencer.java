@@ -4,17 +4,15 @@
 package org.shashwat.xtext.latexQ.serializer;
 
 import com.google.inject.Inject;
-import com.google.inject.Provider;
+import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.xtext.Action;
+import org.eclipse.xtext.Parameter;
+import org.eclipse.xtext.ParserRule;
+import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
-import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
-import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
-import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
-import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
-import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
-import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.shashwat.xtext.latexQ.latexQ.Answer;
 import org.shashwat.xtext.latexQ.latexQ.CHECK;
@@ -31,8 +29,13 @@ public class LatexQSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	private LatexQGrammarAccess grammarAccess;
 	
 	@Override
-	public void createSequence(EObject context, EObject semanticObject) {
-		if(semanticObject.eClass().getEPackage() == LatexQPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+	public void sequence(ISerializationContext context, EObject semanticObject) {
+		EPackage epackage = semanticObject.eClass().getEPackage();
+		ParserRule rule = context.getParserRule();
+		Action action = context.getAssignedAction();
+		Set<Parameter> parameters = context.getEnabledBooleanParameters();
+		if (epackage == LatexQPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case LatexQPackage.ANSWER:
 				sequence_Answer(context, (Answer) semanticObject); 
 				return; 
@@ -49,74 +52,88 @@ public class LatexQSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				sequence_RADIO(context, (RADIO) semanticObject); 
 				return; 
 			}
-		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
+		if (errorAcceptor != null)
+			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
 	
 	/**
+	 * Contexts:
+	 *     Answer returns Answer
+	 *
 	 * Constraint:
-	 *     (answer=STRING type=Type)
+	 *     answer=STRING
 	 */
-	protected void sequence_Answer(EObject context, Answer semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LatexQPackage.Literals.ANSWER__ANSWER) == ValueTransient.YES)
+	protected void sequence_Answer(ISerializationContext context, Answer semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LatexQPackage.Literals.ANSWER__ANSWER) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LatexQPackage.Literals.ANSWER__ANSWER));
-			if(transientValues.isValueTransient(semanticObject, LatexQPackage.Literals.ANSWER__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LatexQPackage.Literals.ANSWER__TYPE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getAnswerAccess().getAnswerSTRINGTerminalRuleCall_1_0(), semanticObject.getAnswer());
-		feeder.accept(grammarAccess.getAnswerAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Type returns CHECK
+	 *     CHECK returns CHECK
+	 *
 	 * Constraint:
 	 *     check?='check'
 	 */
-	protected void sequence_CHECK(EObject context, CHECK semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LatexQPackage.Literals.CHECK__CHECK) == ValueTransient.YES)
+	protected void sequence_CHECK(ISerializationContext context, CHECK semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LatexQPackage.Literals.CHECK__CHECK) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LatexQPackage.Literals.CHECK__CHECK));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getCHECKAccess().getCheckCheckKeyword_0(), semanticObject.isCheck());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     QuestionPaper returns QuestionPaper
+	 *
 	 * Constraint:
 	 *     (papername=ID questions+=Question*)
 	 */
-	protected void sequence_QuestionPaper(EObject context, QuestionPaper semanticObject) {
+	protected void sequence_QuestionPaper(ISerializationContext context, QuestionPaper semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Question returns Question
+	 *
 	 * Constraint:
-	 *     (question=STRING answers+=Answer+)
+	 *     (question=STRING type=Type answers+=Answer+)
 	 */
-	protected void sequence_Question(EObject context, Question semanticObject) {
+	protected void sequence_Question(ISerializationContext context, Question semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Type returns RADIO
+	 *     RADIO returns RADIO
+	 *
 	 * Constraint:
 	 *     radio?='radio'
 	 */
-	protected void sequence_RADIO(EObject context, RADIO semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LatexQPackage.Literals.RADIO__RADIO) == ValueTransient.YES)
+	protected void sequence_RADIO(ISerializationContext context, RADIO semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LatexQPackage.Literals.RADIO__RADIO) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LatexQPackage.Literals.RADIO__RADIO));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getRADIOAccess().getRadioRadioKeyword_0(), semanticObject.isRadio());
 		feeder.finish();
 	}
+	
+	
 }
